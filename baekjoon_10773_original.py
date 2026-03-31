@@ -1,21 +1,18 @@
 class stake:
-    def __init__ (self, item):
+    def __init__ (self):
         self.array = []
         self.size = 0
-        self.cur = 0
     
     def pus(self, item):
-        self.array.append(self.item) = item
+        self.array.append(item)
         self.size += 1
-        self.cur += 1
         
     def out(self):
         if not self.size == 0:
-            self.array[self.cur-1] = 0
+            self.array[self.size-1] = 0
             self.size -= 1
-            self.cur -= 1
 
-a = stake
+a = stake()
 for i in range(0,int(input())):
     e = int(input())
     if not e == 0:
@@ -24,7 +21,7 @@ for i in range(0,int(input())):
         a.out()
         
 sum = 0 
-for i in a:
+for i in a.array:
     sum += i
 
 print(sum)
